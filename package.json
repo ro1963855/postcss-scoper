@@ -1,0 +1,19 @@
+{
+  "name": "postcss-scoped",
+  "version": "1.0.0",
+  "description": "Parse CSS and add scoped selector",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ro1963855/postcss-scoped.git"
+  },
+  "author": "Dandy Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ro1963855/postcss-scoped/issues"
+  },
+  "homepage": "https://github.com/ro1963855/postcss-scoped#readme"
+}
