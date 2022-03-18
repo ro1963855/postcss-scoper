@@ -2,6 +2,13 @@
   "name": "postcss-scoped",
   "version": "1.0.0",
   "description": "Parse CSS and add scoped selector",
+  "keywords": [
+    "postcss-scoped",
+    "css",
+    "prefix",
+    "postcss",
+    "postcss-plugin"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
