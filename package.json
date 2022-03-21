@@ -6,12 +6,15 @@
     "postcss-scoped",
     "css",
     "prefix",
+    "scoped",
     "postcss",
     "postcss-plugin"
   ],
-  "main": "index.js",
+  "main": "lib/scoped.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,19 @@
   "bugs": {
     "url": "https://github.com/ro1963855/postcss-scoped/issues"
   },
-  "homepage": "https://github.com/ro1963855/postcss-scoped#readme"
+  "homepage": "https://github.com/ro1963855/postcss-scoped#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "postcss": "^8.4.12",
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^23.8.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "directories": {
+    "lib": "./lib",
+    "test": "./test"
+  }
 }
