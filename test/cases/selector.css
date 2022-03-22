@@ -1,3 +1,8 @@
+:root {
+  --first-color: #16f;
+  --second-color: #ff7;
+}
+
 html, body {
   padding: 0;
   margin: 0;
