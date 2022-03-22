@@ -13,6 +13,12 @@ module.exports = {
     'key-spacing': 'error',
     'comma-spacing': 'error',
     'arrow-spacing': 'error',
+    'eol-last': ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
+    'object-curly-spacing': ['error', 'always'],
+    'space-before-blocks': 'error',
+    'space-before-function-paren': ['error', 'always'],
+    'prefer-const': 'error',
   },
   plugins: [
     "jest",
