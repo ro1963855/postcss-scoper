@@ -35,4 +35,13 @@ describe('scoped', () => {
 
     expect(css).toEqual(read('selector.out'))
   })
+
+  test('should overwrite selector in the overwrite option', () => {
+    const { css } = postcss([scoped({
+      scope: '.scope',
+      overwrite: ['html', 'body'],
+    })]).process(read('overwrite'))
+
+    expect(css).toEqual(read('overwrite.out'))
+  })
 })

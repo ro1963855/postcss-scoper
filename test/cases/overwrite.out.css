@@ -1,0 +1,97 @@
+:root {
+  --first-color: #16f;
+  --second-color: #ff7;
+}
+
+.scope, .scope {
+  padding: 0;
+  margin: 0;
+}
+
+.scope * {
+  box-sizing: border-box;
+}
+
+.scope #page {
+  overflow: hidden;
+}
+
+.scope #page .page-header {
+  position: fixed
+}
+
+.scope .btn {
+  display: flex;
+}
+
+.scope .btn.btn--small {
+  display: flex;
+}
+
+.scope .btn span {
+  display: inline;
+}
+
+.scope .btn:hover, .scope .btn:active, .scope .btn:focus {
+  background-color: #fff;
+}
+
+.scope .btn:hover,
+.scope .btn:active,
+.scope .btn:focus {
+  background-color: #fff;
+}
+
+.scope .wrapper > .container {
+  display: flex;
+}
+
+.scope [class="icon-"],
+.scope [class*="icon-"],
+.scope [class^="icon-"],
+.scope [class~="icon-"],
+.scope [class|="icon-"],
+.scope [class$="icon-"] {
+  display: inline;
+}
+
+.scope span:not(.icon),
+.scope button:not(.btn),
+.scope div:not(.container),
+.scope div:not([class^="col-"]) {
+  display: none;
+}
+
+.scope .container[data-attr="some-value"] {
+  display: inline;
+}
+
+.scope .container[class*=" icon-"] {
+  display: inline;
+}
+
+.scope .container[class*="icon- "] {
+  display: inline;
+}
+
+.scope .container[data-attr='some-value'] {
+  display: inline;
+}
+
+.scope .container[class*=' icon-'] {
+  display: inline;
+}
+
+.scope .container[class*='icon- '] {
+  display: inline;
+}
+
+.scope .hello:not([class*="left labeled"]) {
+  border-radius: 3rem;
+}
+
+.scope a:not([href]):not([class]),
+.scope a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
