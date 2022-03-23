@@ -22,6 +22,12 @@ describe('scoped', () => {
     })]).process('.a {}')).toThrow(TypeError)
   })
 
+  test('should throw when passing invalid scope selector', () => {
+    expect(() => postcss([scoped({
+      scope: 'a >> b',
+    })]).process('.a {}')).toThrow(TypeError)
+  })
+
   test('should scope all selector css', () => {
     const { css } = postcss([scoped({
       scope: '.scope',
