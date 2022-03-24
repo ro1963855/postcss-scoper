@@ -39,7 +39,7 @@ describe('scoped', () => {
   test('should overwrite selector in the overwrite option', () => {
     const { css } = postcss([scoped({
       scope: '.scope',
-      overwrite: ['html', 'body'],
+      overwrites: ['html', 'body'],
     })]).process(read('overwrite'))
 
     expect(css).toEqual(read('overwrite.out'))

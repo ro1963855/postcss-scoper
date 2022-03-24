@@ -1,6 +1,7 @@
 module.exports = {
   env: {
-    es6: true
+    es6: true,
+    node: true
   },
   extends: [
     "plugin:jest/recommended"
@@ -16,9 +17,11 @@ module.exports = {
     'eol-last': ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
     'object-curly-spacing': ['error', 'always'],
+    'keyword-spacing': 'error',
     'space-before-blocks': 'error',
     'space-before-function-paren': ['error', 'always'],
     'prefer-const': 'error',
+    'no-undef': 'error',
   },
   plugins: [
     "jest",

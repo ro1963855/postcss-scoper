@@ -114,3 +114,14 @@
   68%, 72% { left: 50px; }
   100% { top: 100px; left: 100%; }
 }
+
+@media (orientation: portrait), (max-width:200px) {
+  .scope h1 {
+      font-size:50px;
+      color:red;
+  }
+
+  .scope .btn:hover, .scope .btn:active, .scope .btn:focus {
+    background-color: #fff;
+  }
+}
