@@ -21,9 +21,9 @@ jobs:
       - run: npx conventional-github-releaser -p angular
         continue-on-error: true
         env:
-          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.TOKEN}}
+          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.RELEASE_TOKEN}}
 
-      - run: echo "$secrets.TOKEN"
+      - run: echo "$secrets.RELEASE_TOKEN"
 
       - name: Install Dependencies
         run: npm install
