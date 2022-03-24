@@ -23,7 +23,11 @@ jobs:
         env:
           CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.RELEASE_TOKEN}}
 
-      - run: echo "$secrets.RELEASE_TOKEN"
-
       - name: Install Dependencies
         run: npm install
+        
+      - name: Publish to NPM
+        run: npm -r publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
