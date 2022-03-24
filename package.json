@@ -29,9 +29,10 @@
     "url": "https://github.com/ro1963855/postcss-scoper/issues"
   },
   "homepage": "https://github.com/ro1963855/postcss-scoper#readme",
-  "dependencies": {},
+  "dependencies": {
+    "css-selector-parser": "^1.4.1"
+  },
   "devDependencies": {
-    "css-selector-parser": "^1.4.1",
     "eslint": "^5.16.0",
     "eslint-plugin-jest": "^23.8.2",
     "jest": "^27.5.1",
