@@ -61,7 +61,7 @@ module.exports = {
   plugins: [
     require('postcss-scoper')({
       scope: '.scoped',
-      skipGlobal: false
+      overwrites: ['html', 'body'],
     })
   ]
 }
