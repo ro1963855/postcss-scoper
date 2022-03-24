@@ -23,5 +23,7 @@ jobs:
         env:
           CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.TOKEN}}
 
+      - run: echo ${{secrets.TOKEN}}
+
       - name: Install Dependencies
         run: npm install
