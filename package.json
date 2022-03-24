@@ -1,17 +1,17 @@
 {
-  "name": "postcss-scoped",
+  "name": "postcss-scoper",
   "version": "1.0.1",
   "description": "Parse CSS and add scoped selector",
   "keywords": [
-    "postcss-scoped",
+    "postcss-scoper",
     "css",
     "prefix",
-    "scoped",
+    "scoper",
     "prepend",
     "postcss",
     "postcss-plugin"
   ],
-  "main": "lib/scoped.js",
+  "main": "lib/scoper.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
@@ -21,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ro1963855/postcss-scoped.git"
+    "url": "git+https://github.com/ro1963855/postcss-scoper.git"
   },
   "author": "Dandy Chen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ro1963855/postcss-scoped/issues"
+    "url": "https://github.com/ro1963855/postcss-scoper/issues"
   },
-  "homepage": "https://github.com/ro1963855/postcss-scoped#readme",
+  "homepage": "https://github.com/ro1963855/postcss-scoper#readme",
   "dependencies": {},
   "devDependencies": {
     "css-selector-parser": "^1.4.1",
