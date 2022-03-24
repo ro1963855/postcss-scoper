@@ -1,35 +1,35 @@
 const { readFileSync } = require('fs')
 const { join } = require('path')
 const postcss = require('postcss')
-const scoped = require('../lib/scoped')
+const scoper = require('../lib/scoper')
 
 function read (name) {
   const file = join(__dirname, '/cases/' + name + '.css')
   return readFileSync(file).toString()
 }
 
-describe('scoped', () => {
+describe('scoper', () => {
   test('should throw when passing undefined scope', () => {
     expect(() => postcss()
-      .use(scoped())
+      .use(scoper())
       .process('.a {}')
     ).toThrow(TypeError)
   })
 
   test('should throw when passing invalid scope type', () => {
-    expect(() => postcss([scoped({
+    expect(() => postcss([scoper({
       scope: 0,
     })]).process('.a {}')).toThrow(TypeError)
   })
 
   test('should throw when passing invalid scope selector', () => {
-    expect(() => postcss([scoped({
+    expect(() => postcss([scoper({
       scope: 'a >> b',
     })]).process('.a {}')).toThrow(TypeError)
   })
 
   test('should scope all selector css', () => {
-    const { css } = postcss([scoped({
+    const { css } = postcss([scoper({
       scope: '.scope',
     })]).process(read('selector'))
 
@@ -37,7 +37,7 @@ describe('scoped', () => {
   })
 
   test('should overwrite selector in the overwrite option', () => {
-    const { css } = postcss([scoped({
+    const { css } = postcss([scoper({
       scope: '.scope',
       overwrites: ['html', 'body'],
     })]).process(read('overwrite'))

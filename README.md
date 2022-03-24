@@ -1,4 +1,4 @@
-# postcss-scoped
+# postcss-scoper
 
 A [PostCSS] plugin to scoped css selectors.
 
@@ -52,14 +52,14 @@ body { /* content */ }
 
 ## Usage
 
-`npm i -D postcss-scoped` or `yarn add -D postcss-scoped`
+`npm i -D postcss-scoper` or `yarn add -D postcss-scoper`
 
 create a `postcss.config.js` with:
 
 ```js
 module.exports = {
   plugins: [
-    require('postcss-scoped')({
+    require('postcss-scoper')({
       scope: '.scoped',
       skipGlobal: false
     })
@@ -73,12 +73,12 @@ module.exports = {
 
 ```js
 const postcss = require('postcss');
-const scoped = require('postcss-scopd');
+const scoper = require('postcss-scoper');
 
 const input = fs.readFileSync('path/to/file.css',  'utf-8');
 
 const output = postcss([
-  scoped({
+  scoper({
     scope: '.scoped',
     overwrites: ['html', 'body'],
   })
