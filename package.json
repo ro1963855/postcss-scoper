@@ -1,6 +1,6 @@
 {
   "name": "postcss-scoper",
-  "version": "1.0.6",
+  "version": "1.0.7-beta.7",
   "description": "Parse CSS and add scoped selector",
   "keywords": [
     "postcss-scoper",
@@ -11,8 +11,9 @@
     "postcss",
     "postcss-plugin"
   ],
-  "main": "lib/scoper.js",
+  "main": "dist/bundle.js",
   "scripts": {
+    "build": "rollup -c",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -36,13 +37,12 @@
     "eslint": "^5.16.0",
     "eslint-plugin-jest": "^23.8.2",
     "jest": "^27.5.1",
-    "postcss": "^7"
+    "postcss": "^7",
+    "rollup": "^2.70.1",
+    "rollup-jest": "^1.1.3",
+    "rollup-plugin-uglify": "^6.0.4"
   },
   "jest": {
-    "testEnvironment": "node"
-  },
-  "directories": {
-    "lib": "./lib",
-    "test": "./test"
+    "preset": "rollup-jest"
   }
 }

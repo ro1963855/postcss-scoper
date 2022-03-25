@@ -25,6 +25,9 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+
+      - name: NPM build
+        run: npm run build
         
       - name: Publish to NPM
         run: npm -r publish --access public --no-git-checks

@@ -1,7 +1,7 @@
-const { readFileSync } = require('fs')
-const { join } = require('path')
-const postcss = require('postcss')
-const scoper = require('../lib/scoper')
+import { readFileSync } from 'fs'
+import { join } from 'path'
+import postcss from 'postcss'
+import scoper from '../lib/scoper'
 
 function read (name) {
   const file = join(__dirname, '/cases/' + name + '.css')
