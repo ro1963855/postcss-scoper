@@ -11,7 +11,7 @@
     "postcss",
     "postcss-plugin"
   ],
-  "main": "lib/scoper.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
