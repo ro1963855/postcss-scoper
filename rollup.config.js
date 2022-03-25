@@ -12,7 +12,7 @@ export default {
   plugins: [
     uglify({
       mangle: {
-        toplevel: true,
+        toplevel: false,
       },
     }),
     resolve(),
