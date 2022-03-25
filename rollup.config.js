@@ -1,6 +1,4 @@
 import { uglify } from 'rollup-plugin-uglify'
-import resolve from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
 
 export default {
   input: 'lib/scoper.js',
@@ -10,14 +8,7 @@ export default {
     exports: 'default',
   },
   plugins: [
-    uglify({
-      mangle: {
-        toplevel: false,
-      },
-    }),
-    resolve(),
-    commonjs({
-      include: ['node_modules/**'],
-    }),
+    uglify({}),
   ],
+  external: ['postcss', 'css-selector-parser'],
 }
