@@ -23,6 +23,10 @@ module.exports = {
     'prefer-const': 'error',
     'no-undef': 'error',
     'quote-props': ["error", "consistent-as-needed"],
+    'sort-imports': ["error", {
+      "ignoreDeclarationSort": true,
+      "ignoreMemberSort": false,
+    }]
   },
   parserOptions: {
     sourceType: "module",
