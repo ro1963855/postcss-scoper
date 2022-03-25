@@ -13,6 +13,7 @@
   ],
   "main": "lib/scoper.js",
   "scripts": {
+    "build": "rollup -c",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -36,13 +37,8 @@
     "eslint": "^5.16.0",
     "eslint-plugin-jest": "^23.8.2",
     "jest": "^27.5.1",
-    "postcss": "^7"
-  },
-  "jest": {
-    "testEnvironment": "node"
-  },
-  "directories": {
-    "lib": "./lib",
-    "test": "./test"
+    "postcss": "^7",
+    "rollup": "^2.70.1",
+    "rollup-plugin-uglify": "^6.0.4"
   }
 }
