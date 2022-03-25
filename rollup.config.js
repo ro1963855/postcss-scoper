@@ -18,11 +18,6 @@ export default {
     resolve(),
     commonjs({
       include: ['node_modules/**'],
-      dynamicRequireTargets: [
-        'node_modules/postcss/lib/css-syntax-error.js',
-        'node_modules/postcss/lib/parse.js',
-        'node_modules/postcss/lib/container.js',
-      ],
     }),
   ],
 }
