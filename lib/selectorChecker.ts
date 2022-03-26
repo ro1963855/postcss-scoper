@@ -6,7 +6,7 @@ parser.registerNestingOperators('>', '+', '~')
 parser.registerAttrEqualityMods('^', '$', '*', '~')
 parser.enableSubstitutes()
 
-export const formatSelector = (selector) => {
+export const formatSelector = (selector: string) => {
   if (typeof selector !== 'string') {
     throw new TypeError(`@postcss-scoper: Invalid selector: ${selector}, scope options should be type of string.`)
   }
@@ -23,7 +23,7 @@ export const formatSelector = (selector) => {
   return trimSelector
 }
 
-export const isValidateSelector = (selector) => {
+export const isValidateSelector = (selector: string) => {
   try {
     parser.parse(selector)
   } catch (e) {
