@@ -8,7 +8,11 @@ export default {
     exports: 'default',
   },
   plugins: [
-    uglify({}),
+    uglify({
+      mangle: {
+        toplevel: true,
+      },
+    }),
   ],
   external: ['postcss', 'css-selector-parser'],
 }
