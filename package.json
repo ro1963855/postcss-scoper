@@ -1,6 +1,6 @@
 {
   "name": "postcss-scoper",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Parse CSS and add scoped selector",
   "keywords": [
     "postcss-scoper",
