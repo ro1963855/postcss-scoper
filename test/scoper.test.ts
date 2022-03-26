@@ -3,7 +3,7 @@ import { join } from 'path'
 import postcss from 'postcss'
 import scoper from '../lib/scoper'
 
-function read (name) {
+function read (name: string) {
   const file = join(__dirname, '/cases/' + name + '.css')
   return readFileSync(file).toString()
 }
@@ -18,6 +18,7 @@ describe('scoper', () => {
 
   test('should throw when passing invalid scope type', () => {
     const results = postcss()
+      // @ts-ignore
       .use(scoper({ scope: 0 }))
       .process('.a {}')
     expect(() => results.css).toThrow()

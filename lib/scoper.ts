@@ -1,4 +1,4 @@
-import { plugin } from 'postcss'
+import { plugin, Root, Rule } from 'postcss'
 import { formatSelector } from './selectorChecker'
 import { isSkipAtRule } from './atruleHelper'
 import { isSkipSelector } from './ruleHelper'
@@ -6,7 +6,16 @@ import { getOverwrite, overwriteSelector } from './overwriteHelper'
 
 const processed = Symbol('processed')
 
-const scoper = (options) => (css) => {
+interface ScoperOptions {
+  scope: string;
+  overwrites?: string[];
+}
+
+interface ScoperRule extends Rule {
+  [processed: symbol]: boolean;
+}
+
+const scoper = (options: ScoperOptions) => (root: Root) => {
   const { scope, overwrites } = Object.assign({}, {
     scope: '',
     overwrites: [],
@@ -14,17 +23,17 @@ const scoper = (options) => (css) => {
 
   const formattedScope = formatSelector(scope)
 
-  css.walkAtRules((atRule) => {
+  root.walkAtRules((atRule) => {
     if (isSkipAtRule(atRule.name)) {
-      atRule.walkRules((rule) => {
+      atRule.walkRules((rule: ScoperRule) => {
         rule[processed] = true
       })
     }
   })
 
-  css.walkRules((rule) => {
+  root.walkRules((rule: ScoperRule) => {
     if (rule[processed]) return
-    rule.selectors = rule.selectors.map((selector) => {
+    rule.selectors = rule.selectors.map((selector: string) => {
       if (isSkipSelector(selector)) return selector
 
       const overwrite = getOverwrite(selector, overwrites)
