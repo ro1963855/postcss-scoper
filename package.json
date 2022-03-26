@@ -31,13 +31,13 @@
   },
   "homepage": "https://github.com/ro1963855/postcss-scoper#readme",
   "dependencies": {
-    "css-selector-parser": "^1.4.1"
+    "css-selector-parser": "^1.4.1",
+    "postcss": "^7"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-plugin-jest": "^23.8.2",
     "jest": "^27.5.1",
-    "postcss": "^7",
     "rollup": "^2.70.1",
     "rollup-jest": "^1.1.3",
     "rollup-plugin-uglify": "^6.0.4"
