@@ -25,5 +25,11 @@ jobs:
 
       - run: npm install
 
-      - name: Lint
-        run: npm run lint
+      - name: Generate Coverage Report
+        run: npm run test:coverage
+
+      - uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/clover.xml
+          fail_ci_if_error: true
