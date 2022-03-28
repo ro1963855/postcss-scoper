@@ -5,6 +5,4 @@ module.exports = {
   testEnvironment: 'jsdom',
   testRegex: '/test/.*\\.test?\\.ts$',
   moduleFileExtensions: ['ts', 'js'],
-  collectCoverage: true,
-  collectCoverageFrom: ['./lib/**'],
 }
