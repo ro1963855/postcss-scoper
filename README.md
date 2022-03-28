@@ -1,5 +1,4 @@
-[![npm version](https://img.shields.io/npm/v/postcss-scoper.svg)](https://www.npmjs.com/package/postcss-scoper) [![LICENSE](https://img.shields.io/npm/l/postcss-scoper.svg)](https://github.com/ro1963855/postcss-scoper/blob/master/LICENSE) [![Test](https://github.com/ro1963855/postcss-scoper/actions/workflows/test.yml/badge.svg)](https://github.com/ro1963855/postcss-scoper/actions/workflows/test.yml) [![Test Coverage](https://img.shields.io/codecov/c/github/ro1963855/postcss-scoper.svg)](https://app.codecov.io/gh/ro1963855/postcss-scoper)
-
+[![npm version](https://img.shields.io/npm/v/postcss-scoper.svg)](https://www.npmjs.com/package/postcss-scoper) [![LICENSE](https://img.shields.io/npm/l/postcss-scoper.svg)](https://github.com/ro1963855/postcss-scoper/blob/master/LICENSE) [![Test](https://github.com/ro1963855/postcss-scoper/actions/workflows/test.yml/badge.svg)](https://github.com/ro1963855/postcss-scoper/actions/workflows/test.yml) [![Test Coverage](https://api.codeclimate.com/v1/badges/7984cd7784a202a8f6d8/test_coverage)](https://codeclimate.com/github/ro1963855/postcss-scoper/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/7984cd7784a202a8f6d8/maintainability)](https://codeclimate.com/github/ro1963855/postcss-scoper/maintainability)
 # postcss-scoper
 
 A [PostCSS] plugin to scoped css selectors.
