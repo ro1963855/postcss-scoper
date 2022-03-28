@@ -24,15 +24,6 @@ jobs:
           cache: npm
 
       - run: npm install
-
-      - name: Generate Coverage Report
-        run: npm run test:coverage
-
-      - name: Publish code coverage to Codecov
-        uses: codecov/codecov-action@v2
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          fail_ci_if_error: true
           
       - name: Publish code coverage to Codeclimate
         uses: paambaati/codeclimate-action@v3.0.0
